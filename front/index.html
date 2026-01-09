@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>tools | pu</title>
+  </head>
+  <body>
+    <div class="container-tools">
+      <!-- ASIDE / MENU -->
+      <aside class="tools-aside">
+        <h2 class="logo">My Tools</h2>
+
+        <ul class="menu">
+          <li class="active">WhatsApp Link Generator</li>
+          <li>Email Tools</li>
+          <li>Text Encoder</li>
+          <li>QR Generator</li>
+          <li>Settings</li>
+        </ul>
+      </aside>
+
+      <!-- MAIN SECTION -->
+      <section class="tools-section">
+        <div class="wa-tool">
+          <div class="form-group">
+            <label for="phone">Phone number (international)</label>
+            <input type="text" id="phone" placeholder="918780163249" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              rows="4"
+              placeholder="Bonjour Monsieur Raphael, je n’arrive pas à envoyer mes documents..."
+            ></textarea>
+          </div>
+
+          <!-- RESULT -->
+          <div class="result" id="resultBox" style="display: none">
+            <label>Generated WhatsApp link</label>
+
+            <div class="result-row">
+              <input type="text" id="result" readonly />
+              <button class="copy-btn" id="copyBtn">Copy</button>
+            </div>
+
+            <a id="openLink" target="_blank">Open in WhatsApp</a>
+          </div>
+        </div>
+        
+      </section>
+    </div>
+    <script src="../script/generate_link_whatsapp.js"></script>
+  </body>
+</html>
