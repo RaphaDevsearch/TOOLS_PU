@@ -10,7 +10,7 @@
   display: flex;
   height: 100vh;
   background: #f4f6f8;
-  overflow: hidden; /* empêche le scroll global */
+  overflow: hidden;
 }
 
 /* ASIDE */
@@ -19,7 +19,7 @@
   background: #1f2937;
   color: #fff;
   padding: 20px;
-  overflow-y: auto; /* scroll si menu long */
+  overflow-y: auto;
 }
 
 .tools-aside .logo {
@@ -50,7 +50,7 @@
 .tools-section {
   flex: 1;
   padding: 30px;
-  overflow-y: auto; /* scroll du contenu */
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
@@ -65,7 +65,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* whatsaap tools  */
+/* WHATSAPP TOOL */
 .wa-tool {
   max-width: 500px;
 }
@@ -110,4 +110,58 @@
 
 .copy-btn:hover {
   background: #059669;
+}
+
+/* ========================= */
+/* RESPONSIVE (MOBILE) */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .container-tools {
+    flex-direction: column;
+  }
+
+  /* ASIDE becomes top bar */
+  .tools-aside {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow-x: auto;
+  }
+
+  .tools-aside .logo {
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+
+  .menu {
+    display: flex;
+    gap: 10px;
+  }
+
+  .menu li {
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+
+  /* SECTION full width */
+  .tools-section {
+    padding: 20px;
+  }
+
+  /* TOOL fits screen */
+  .wa-tool {
+    max-width: 100%;
+  }
+
+  /* RESULT stacks */
+  .result-row {
+    flex-direction: column;
+  }
+
+  .copy-btn {
+    width: 100%;
+  }
 }
