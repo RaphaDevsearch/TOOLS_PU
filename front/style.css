@@ -25,4 +25,6 @@ aside{
 main{
   background: rgb(223, 209, 21);
   overflow-y: auto;
+
+  padding: 20px;
 }
