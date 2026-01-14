@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+.container{
+  overflow: hidden;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 220px auto;
+
+
+}
+
+aside{
+  background: black;
+}
+main{
+  background: rgb(223, 209, 21);
+  overflow-y: auto;
+}
