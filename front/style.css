@@ -4,7 +4,13 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-
+a{
+  text-decoration: none;
+  color: inherit;
+}
+html {
+  scroll-behavior: smooth;
+}
 /* CONTAINER */
 .container-tools {
   display: flex;
@@ -52,10 +58,24 @@
   padding: 30px;
   overflow-y: auto;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .tools-section h1 {
   margin-bottom: 20px;
+}
+
+.tool-block {
+
+  background: rgb(248, 246, 246);
+  padding: 5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .tool-card {
