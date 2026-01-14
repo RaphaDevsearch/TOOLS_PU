@@ -1,7 +1,7 @@
 const burgerBtn = document.getElementById("burgerBtn");
+const sidebar = document.getElementById("sidebar");
 
 burgerBtn.addEventListener("click", () => {
   burgerBtn.classList.toggle("active");
-  // Optional: toggle sidebar
-  document.querySelector("aside").classList.toggle("open");
+  sidebar.classList.toggle("open");
 });

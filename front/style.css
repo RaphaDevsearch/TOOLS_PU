@@ -1,64 +1,130 @@
-*{
+/* Reset */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
+  font-family: "Arial", sans-serif;
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
 }
-.container{
-  overflow: hidden;
-  height: 100vh;
 
+/* Container layout */
+.container {
   display: grid;
   grid-template-columns: 220px auto;
+  height: 100vh;
+  transition: all 0.3s ease;
 
-
+  overflow: hidden;
 }
 
-aside{
-  background: black;
-  padding: 10px;
-  position: relative;
-}
-
-.container .burger-btn{
-  display: none;
-}
-main{
-  background: rgb(223, 209, 21);
-  overflow-y: auto;
-
+/* Sidebar */
+aside {
+  background: #111;
+  color: #fff;
   padding: 20px;
+  position: relative;
+  transition: transform 0.3s ease;
 }
 
+aside nav ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+aside nav ul li {
+  margin: 15px 0;
+}
+
+aside nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+aside nav ul li a:hover {
+  color: #f4d03f;
+}
+/* Burger button */
+.burger-btn {
+  width: 35px;
+  height: 30px;
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  position: fixed; /* FIXED so always visible */
+  top: 15px;
+  right: 15px;
+  z-index: 1001;
+}
+
+.burger-btn .line {
+  height: 4px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.burger-btn.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger-btn.active .line:nth-child(2) {
+  opacity: 0;
+}
+.burger-btn.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* section tools */
+main{
+  padding: 1rem;
+  /* background: red; */
+  overflow-y: auto;
+}
+/* Mobile */
 @media screen and (max-width: 768px) {
-  .container .burger-btn{
-    display: flex;
+  .burger-btn {
+    display: flex; /* show burger on mobile */
   }
-  .container{
-    display: flex;
-  }
-  .open{
-    position: absolute;
+
+  aside {
+    position: fixed;
+    left: -220px; /* hide sidebar initially */
     top: 0;
-    left: 0;
     width: 200px;
     height: 100vh;
-    /* background: black; */
-    padding: 10px;
+    background: #111;
+    padding: 20px;
     z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+
+  aside.open {
+    transform: translateX(220px);
+  }
+
+  main {
+    flex: 1;
+    margin-left: 0;
+    
 
   }
-  aside{
-    min-width: 150px;
+  .container{
+    display: block;
   }
-  main{
-    background: red;
+  .section-tools {
+    /* background: blue; */
+    
   }
-  
 }
-
