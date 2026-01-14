@@ -1,0 +1,38 @@
+/* Burger button container */
+.burger-btn {
+  width: 35px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 5px;
+
+  background: rgba(229, 231, 229, 0.726);
+  position: absolute;
+
+  right: 10px;
+  top: 10px;
+}
+
+/* Lines inside the burger */
+.burger-btn .line {
+  height: 4px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Active state (cross icon) */
+.burger-btn.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-btn.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-btn.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}

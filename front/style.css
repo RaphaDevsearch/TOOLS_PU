@@ -21,6 +21,12 @@ body{
 
 aside{
   background: black;
+  padding: 10px;
+  position: relative;
+}
+
+.container .burger-btn{
+  display: none;
 }
 main{
   background: rgb(223, 209, 21);
@@ -28,3 +34,31 @@ main{
 
   padding: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .container .burger-btn{
+    display: flex;
+  }
+  .container{
+    display: flex;
+  }
+  .open{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    /* background: black; */
+    padding: 10px;
+    z-index: 1000;
+
+  }
+  aside{
+    min-width: 150px;
+  }
+  main{
+    background: red;
+  }
+  
+}
+
