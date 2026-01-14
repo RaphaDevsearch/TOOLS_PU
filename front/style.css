@@ -115,10 +115,9 @@ main{
   }
 
   main {
-    flex: 1;
     margin-left: 0;
-    
-
+    height: 100vh;
+    overflow-y: auto;
   }
   .container{
     display: block;
