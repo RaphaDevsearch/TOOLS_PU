@@ -5,3 +5,10 @@ burgerBtn.addEventListener("click", () => {
   burgerBtn.classList.toggle("active");
   sidebar.classList.toggle("open");
 });
+
+document.querySelectorAll('.link-item').forEach(link => {
+  link.addEventListener('click', () => {
+    sidebar.classList.remove("open");
+    burgerBtn.classList.remove("active");
+  });
+});
