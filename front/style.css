@@ -90,11 +90,19 @@ aside nav ul li a:hover {
 main{
   padding: 1rem;
   /* background: red; */
+  scroll-behavior: smooth;
   overflow-y: auto;
+
 }
-main {
- scroll-behavior: smooth;
+
+.section-tools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* background: red; */
 }
+
 .tool-card {
   background: #fff;
   border: 1px solid #dddddd4b;
@@ -104,6 +112,8 @@ main {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
   min-height: 20rem;
+  max-width: 900px;
+  width: 100%;
 }
 /* Mobile */
 @media screen and (max-width: 768px) {
@@ -134,9 +144,5 @@ main {
   }
   .container{
     display: block;
-  }
-  .section-tools {
-    /* background: blue; */
-    
   }
 }
